@@ -13,13 +13,13 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{157BC9C0-3E8D-4929-A477-FAA2058DECDE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,13 +72,13 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);DUPLO_VERSION="0.1"</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,6 +108,7 @@
     <ClCompile Include="src\Duplo.cpp" />
     <ClCompile Include="src\FileTypeBase.cpp" />
     <ClCompile Include="src\FileTypeFactory.cpp" />
+    <ClCompile Include="src\FileType_Ada.cpp" />
     <ClCompile Include="src\FileType_C.cpp" />
     <ClCompile Include="src\FileType_CS.cpp" />
     <ClCompile Include="src\FileType_S.cpp" />
@@ -129,6 +130,7 @@
     <ClInclude Include="src\Duplo.h" />
     <ClInclude Include="src\FileTypeBase.h" />
     <ClInclude Include="src\FileTypeFactory.h" />
+    <ClInclude Include="src\FileType_Ada.h" />
     <ClInclude Include="src\FileType_C.h" />
     <ClInclude Include="src\FileType_CS.h" />
     <ClInclude Include="src\FileType_S.h" />
